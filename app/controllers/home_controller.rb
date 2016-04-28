@@ -24,6 +24,7 @@ class HomeController < ApplicationController
         new_row = Name.new
         new_row.name = params[:name]
         new_row.like_count = 0
+        new_row.dislike_count = 0
         new_row.save
         redirect_to "/list"
       end
@@ -43,6 +44,7 @@ class HomeController < ApplicationController
     @target_name = Name.find(params[:name_id])
     @target_name.like_count +=1
     @target_name.save
+    redirect_to :back
   end
   def delete
     # @target_name = Name.find(params[:name_id])

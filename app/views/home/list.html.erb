@@ -1,17 +1,26 @@
 <div class="container">
   <div class="row">
+    <div style="top: 45px; left: 24px; position:absolute;">
+      <a class="waves-effect waves-light btn-large indigo darken-4" href="/">
+        <i class="fa fa-reply" aria-hidden="true"></i>
+        홈으로
+      </a>
+    </div>
+
     <div class="col s8 offset-s2 l6 offset-l3">
       <table>
         <tbody>
           <% @names.each do |name| %>
             <tr>
               <td><h1><%= name.name %></h1></td>
-              <td><a class="waves-effect waves-light btn-large" href="/update_like/<%= name.id%>">좋아요 <%= name.like_count%></a></td>
+              <td><a class="waves-effect waves-light btn-large" href="/update_like/<%= name.id%>">좋아요 <%= name.like_count%></a>
+
+              </td>
             </tr>
           <% end %>
         </tbody>
       </table>
-      <a class="waves-effect waves-light btn-large indigo darken-4" href="/"><i class="material-icons">store</i>홈으로</a>
+
     </div>
   </div>
 </div>
