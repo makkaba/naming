@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 
 
   def write
-    
+
   end
 
   def write_process
@@ -44,6 +44,11 @@ class HomeController < ApplicationController
     @target_name.like_count +=1
     @target_name.save
   end
+  def delete
+    # @target_name = Name.find(params[:name_id])
+    # @target_name.destroy
 
+    redirect_to :back
+  end
 
 end
