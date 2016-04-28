@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col s8 offset-s2 l4 offset-l4">
+    <div class="col s8 offset-s2 l6 offset-l3">
       <% @names.each do |name| %>
-
-      <h1><%= name.name %></h1>
-
+        <div>
+          <h1 class="single-row"><%= name.name %></h1>
+          <a class="waves-effect waves-light btn-large" href="/update_like/<%= name.id%>">좋아요 <%= name.like_count%></a>
+        </div>
       <% end %>
 
-      <a class="waves-effect waves-light btn-large col s6" href="/">홈으로</a>
+      <a class="waves-effect waves-light btn-large" href="/">홈으로</a>
     </div>
   </div>
 </div>

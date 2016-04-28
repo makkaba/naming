@@ -34,4 +34,12 @@ class HomeController < ApplicationController
 
 
   end
+
+  def update_like
+    @target_name = Name.find(params[:name_id])
+    @target_name.like_count +=1
+    @target_name.save
+  end
+
+
 end

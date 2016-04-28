@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/error' => 'home#error'
   get '/list' => 'home#list'
+  get '/update_like/:name_id' => 'home#update_like'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
