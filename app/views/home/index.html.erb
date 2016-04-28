@@ -1,24 +1,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="col s4 offset-s4">
-      <h3>추천 단어는..</h3>
-      <h1>
+    <div class="col l4 offset-l4 s12">
+      <h3 class="center-align">추천 단어는..</h3>
+      <div class="card grey lighten-3">
+          <div class="card-content black-text">
+            <h1 class="center-align"><%= @recommendedName.name %></h1>
+          </div>
+      </div>
+      <p class="right-align">다시 추천받거나, 직접 추가해보세요</p>
+      <div class="right">
 
-        <%= @recommendedName.name %>
-
-
-      </h1>
-
-
-      <h5>직접 추가해보세요</h5>
-      <form action="/write" method="post">
-        <input type ="text" name ="name">
-
-
-        <button class="btn waves-effect waves-light" type="submit" name="action">저장</button>
-      </form>
-
+        <a class="btn-floating btn-large waves-effect waves-light teal lighten-1" href="/"><i class="material-icons">loop</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light teal lighten-1" href="/write">추가</a>
+      </div>
     </div>
 
 

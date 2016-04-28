@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'home/index'
 	root 'home#index'
-  post '/write' => 'home#write'
+  get '/write' => 'home#write'
+
+  post '/write_process' => 'home#write_process' 
+
 
   get '/error' => 'home#error'
   get '/list' => 'home#list'

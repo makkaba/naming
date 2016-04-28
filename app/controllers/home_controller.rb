@@ -12,6 +12,10 @@ class HomeController < ApplicationController
 
 
   def write
+    
+  end
+
+  def write_process
     #중복단어무시.
       if params[:name].empty?
         redirect_to "/error"
