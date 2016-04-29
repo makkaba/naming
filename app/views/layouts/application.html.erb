@@ -24,6 +24,22 @@
   </script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+  body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+ .page-footer{
+   position: absolute;
+   width:100%;
+   bottom:0px;
+ }
+  </style>
 </head>
 <body>
 
